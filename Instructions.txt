@@ -1,0 +1,39 @@
+The first thing you have to do is set up an account at SpamCop.net. When you log in, set the expiration to 1 year.
+
+Enable the AppleScript menu.
+1) Open "AppleScript Editor.app". It will either be in your Applications folder or Utilities folder.
+2) Edit General preferences, and turn on "Show Script menu un menu bar".
+Now you'll have an easy way to fire off the initial script. These items are only available when Mail is the front most application.
+
+Set up a script to send SpamCop the raw source of the spam messages.
+1) Create this folder if it does not exist: ~/Library/Scripts/Applications/Mail
+2) Drop the attached "SpamCopNotify.scpt" into that folder.
+3) Edit line 1 with your unique SpamCop email submission address.
+This script will get the raw source of all messages selected in Mail and send them to SpamCop, mark the message as read, mark the message as spam, then delete the message.
+
+Set up a script to handle the SpamCop verification email.
+1) Drop the attached "SpamCopIn.scpt" file into the same folder as the previous script.
+This script will automatically 'click' the verification link and delete the verification email.
+
+Add a mail rule to fire SpamCopIn.scpt when the verification email is received.
+1) Create a new mail rule
+2) If all of the following are met:
+ + Received is less than 2 days old (that's a spamcop rule)
+ + From contains "spamcop@devnull.spamcop.net"
+ + Message content contains "http://www.spamcop.net/sc?id="
+3) Perform the following actions:
+ + Run AppleScript "~/Library/Scripts/Applications/Mail/SpamCopIn.scpt"
+ + Play Sound [any] (this is optional)
+4) Do Not Apply when prompted to do so when you save.
+
+Now we're all ready to go.
+Next time you get spam...
+1) Select the message(s)
+2) From the AppleScript menu, select "SpamCopNotify.scpt"
+SpamCopNotify.scpt will get the raw source of all messages selected in Mail and send them to SpamCop.
+The messages will be marked as read, marked as spam then deleted.
+SpamCop will reply with a verification message(s) shortly.
+Mail will evaluate the verification message(s) with it's rules and launch the SpamCopIn.scpt script.
+SpamCopIn.scpt will find the verification link and launch it in your default browser as a new window/tab.
+The message will be marked as read then deleted.
+3) When your browser opens the SpamCop site, wait for the nag screen to go away then press "Process Spam".
