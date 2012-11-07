@@ -12,7 +12,7 @@ Set up a script to send SpamCop the raw source of the spam messages.
 This script will get the raw source of all messages selected in Mail and send them to SpamCop, mark the message as read, mark the message as spam, then delete the message.
 
 Set up a script to handle the SpamCop verification email.
-1) Drop the attached "SpamCopIn.scpt" file into the same folder as the previous script.
+1) Drop the attached "SpamCopIn.scpt" file into ~/Library/Application Scripts/com.apple.mail
 This script will automatically 'click' the verification link and delete the verification email.
 
 Add a mail rule to fire SpamCopIn.scpt when the verification email is received.
@@ -22,7 +22,7 @@ Add a mail rule to fire SpamCopIn.scpt when the verification email is received.
  + From contains "spamcop@devnull.spamcop.net"
  + Message content contains "http://www.spamcop.net/sc?id="
 3) Perform the following actions:
- + Run AppleScript "~/Library/Scripts/Applications/Mail/SpamCopIn.scpt"
+ + Run AppleScript "SpamCopIn.scpt"
  + Play Sound [any] (this is optional)
 4) Do Not Apply when prompted to do so when you save.
 
