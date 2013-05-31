@@ -18,4 +18,5 @@ Luckily much of it can be automated with Mac Mail and some AppleScripting. The s
 10) Submit the spam report
 As you can see, 7 steps are handled automatically.
 
-Graphic instructions at: http://www.webveteran.com/blog/web-related-software/spamcop-deputy/automate-reporting-spam-to-spamcop-net/
+Graphic (but dated) instructions at: http://www.webveteran.com/blog/web-related-software/spamcop-deputy/automate-reporting-spam-to-spamcop-net/
+These will be updated soon.
