@@ -36,4 +36,4 @@ SpamCop will reply with a verification message(s) shortly.
 Mail will evaluate the verification message(s) with it's rules and launch the SpamCopIn.scpt script.
 SpamCopIn.scpt will find the verification link and launch it in your default browser as a new window/tab.
 The message will be marked as read then deleted.
-3) When your browser opens the SpamCop site, wait for the nag screen to go away then press "Process Spam".
+3) When your browser opens the SpamCop site press "Process Spam".
