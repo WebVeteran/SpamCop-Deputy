@@ -1,3 +1,6 @@
+September 2019 Update:
+Added the optional ability to CC the spam sender. Because "follow-up" spam. You know. Those spammers that continually re-forward the same message to you every week making it look like a legitimate follow-up thread. So now in addition to submitting the spam to SpamCop, you can optionally (and by default) CC the spam sender.
+
 Reporting spam to SpamCop can get to be tiresome. The normal process is:
 1) Receive spam
 2) Copy the raw message
