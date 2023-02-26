@@ -31,7 +31,7 @@ Add a mail rule to fire SpamCopIn.scpt when the verification email is received.
 2) If all of the following are met:
  + Received is less than 2 days old (that's a spamcop rule)
  + From contains "spamcop@devnull.spamcop.net"
- + Message content contains "http://www.spamcop.net/sc?id="
+ + Message content contains "https://www.spamcop.net/sc?id="
 3) Perform the following actions:
  + Run AppleScript "SpamCopIn.scpt"
  + Play Sound [any] (this is optional)
